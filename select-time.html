@@ -1,0 +1,279 @@
+<html lang="en" style="height: auto">
+  <head>
+    <title>Reservation</title>
+    <meta name="description" content="" />
+    <meta name="title" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <base href="" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10.78px 20px;
+        background-color: white;
+        color: black;
+        z-index: 10;
+      }
+
+      .top-group {
+        display: flex;
+        align-items: center;
+      }
+      .arrow-left {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .title {
+        width: 100%;
+        margin: 0;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 25.45px;
+        text-align: center;
+      }
+
+      main {
+        margin: 29.22px 0 89px;
+        padding: 0 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+      .time-info {
+        display: flex;
+        margin-bottom: 25px;
+        flex-direction: column;
+        gap: 34px;
+      }
+      .time-info .date {
+        text-align: start;
+        line-height: 19.09px;
+        font-weight: 600;
+        color: #466de6;
+      }
+      .time-info .group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 22px;
+      }
+      .time-info .group > span {
+        max-width: 42px;
+        align-self: flex-end;
+      }
+      .time-info .group .center {
+        margin-bottom: 18px;
+      }
+      .time-info .group .center span {
+        display: inline-block;
+        padding-bottom: 13px;
+        font-size: 20px;
+        color: #869deb;
+      }
+      .time-info ~ .time-info {
+        margin-top: 50px;
+      }
+      p {
+        margin: 20px 0;
+        font-weight: 600;
+      }
+      section {
+        text-align: start;
+      }
+      label {
+        display: block;
+        border: 1px solid #456ceb;
+        border-radius: 11px;
+        padding: 17px 30px;
+        color: #456ceb;
+        cursor: pointer;
+      }
+      label ~ label {
+        margin-top: 10px;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"]:checked + label {
+        color: white;
+        background-color: #456ceb;
+      }
+      article {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+      }
+      article img {
+        width: 115.82px;
+        height: 70px;
+        border-radius: 10px;
+      }
+      article div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .item-content-top {
+        margin-bottom: 8px;
+        font-size: 10px;
+      }
+      .item-content-top span:nth-of-type(1) {
+        font-weight: 600;
+      }
+
+      .item-content-bottom {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .item-content-bottom span:nth-of-type(2) {
+        border: 1px solid #456ceb;
+        border-radius: 50px;
+        padding: 2.5px 16.5px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      input[type="checkbox"]:checked
+        + label
+        .item-content-bottom
+        span:nth-of-type(2) {
+        border-color: white;
+      }
+      .notice {
+        margin: 50px 0 0;
+        font-size: 13px;
+        font-weight: normal;
+      }
+
+      footer {
+        position: fixed;
+        display: flex;
+        bottom: 0;
+        border-top: 1px solid #e5e5e5;
+        padding: 10.78px 20px;
+        background-color: white;
+        z-index: 10;
+      }
+      footer button {
+        width: 100%;
+        border: none;
+        border-radius: 8.91px;
+        padding: 16px 0;
+        color: white;
+        font-size: 15.59px;
+        line-height: 18.61px;
+        text-align: center;
+        background-color: #006dbb;
+        cursor: pointer;
+      }
+      footer button {
+        min-width: 119px;
+        border: none;
+        border-radius: 8.91px;
+        padding: 16px 0;
+        color: #696d71;
+        font-size: 15.59px;
+        line-height: 18.61px;
+        text-align: center;
+        background-color: #dedfe3;
+        cursor: pointer;
+      }
+      .next {
+        min-width: 230.28px;
+        margin-inline-start: 14px;
+        color: white;
+        background-color: #006dbb;
+      }
+      .next:disabled {
+        background-color: #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app" style="width: auto">
+      <header>
+        <div class="top-group">
+          <button class="arrow-left" type="button">
+            <img src="images/arrow-left.svg" alt="" />
+          </button>
+          <!-- case 1 -->
+          <h2 class="title">출발시간 선택</h2>
+          <!-- case 2 -->
+          <!-- <h2 class="title">도착시간 선택</h2> -->
+        </div>
+      </header>
+      <main>
+        <!-- item1 -->
+        <div class="time-info">
+          <span class="date">2024년 2월 18일</span>
+          <div class="group">
+            <span>15:00 부산</span>
+            <div class="center">
+              <span>19시간</span>
+              <img src="images/long-arrow.-right.svg" alt="" />
+            </div>
+            <span>10:00 오사카</span>
+          </div>
+        </div>
+        <p>인사이드</p>
+        <section>
+          <input id="item1" type="checkbox" value="1" />
+          <label for="item1">
+            <article>
+              <img src="images/c201.png" alt="" />
+              <div>
+                <span>일반 운임</span>
+                <span>200,000원</span>
+                <span>잔여 12실</span>
+              </div>
+            </article>
+          </label>
+        </section>
+        <!-- item2 -->
+        <div class="time-info">
+          <div class="group">
+            <span>18:00 부산</span>
+            <div class="center">
+              <span>19시간</span>
+              <img src="images/long-arrow.-right.svg" alt="" />
+            </div>
+            <span>13:00 오사카</span>
+          </div>
+        </div>
+        <p>인사이드</p>
+        <section>
+          <input id="item2" type="checkbox" value="1" />
+          <label for="item2">
+            <article>
+              <img src="images/c101.png" alt="" />
+              <div>
+                <span>오션뷰</span>
+                <span>250,000원</span>
+                <span>잔여 10실</span>
+              </div>
+            </article>
+          </label>
+        </section>
+        <p class="notice">
+          ❊ 성인 1인 기준 운임이며, 전체 인원에 따라 총 운임이 결정됩니다.
+        </p>
+      </main>
+      <footer>
+        <button>이전</button>
+        <button class="next">선택 완료</button>
+      </footer>
+    </div>
+  </body>
+</html>

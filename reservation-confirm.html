@@ -1,0 +1,318 @@
+<html lang="en" style="height: auto">
+  <head>
+    <title>Reservation confirm</title>
+    <meta name="description" content="" />
+    <meta name="title" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <base href="" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10.78px 20px;
+        background-color: white;
+        color: black;
+        z-index: 10;
+      }
+
+      .top-group {
+        display: flex;
+        align-items: center;
+      }
+      .arrow-left {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .title {
+        width: 100%;
+        margin: 0;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 25.45px;
+        text-align: center;
+      }
+
+      main {
+        margin: 35.22px 0 30px;
+        padding: 0 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .content-1,
+      .content-2,
+      .content-3 {
+        font-weight: 600;
+        line-height: 19.09px;
+      }
+      .content-1 {
+        margin-bottom: 43px;
+        text-align: center;
+      }
+      .content-2 {
+        margin: 70px 0 20px;
+        color: #006dbb;
+      }
+
+      label {
+        display: block;
+        border: 1px solid #456ceb;
+        border-radius: 11px;
+        padding: 10px 16px;
+        color: #456ceb;
+      }
+      label ~ label {
+        margin-top: 20px;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      label button {
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        padding: 2.5px;
+        color: white;
+        font-size: 10px;
+        line-height: 20px;
+        background-color: #ff0000;
+        cursor: pointer;
+      }
+      label button:disabled {
+        background-color: #e5e5e5;
+      }
+
+      article div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item-content-top {
+        margin-bottom: 5px;
+        font-size: 10px;
+      }
+      .item-content-top span:nth-of-type(1) {
+        font-weight: 600;
+      }
+
+      .item-content-bottom {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .item-content-bottom span:nth-of-type(1):not(.badge-group span) {
+        color: black;
+        font-weight: 600;
+      }
+      .item-content-bottom .badge {
+        border: 1px solid #456ceb;
+        border-radius: 50px;
+        padding: 2.5px 7.5px;
+        font-size: 10px;
+        line-height: 20px;
+        color: #456ceb;
+      }
+      .badge ~ .badge {
+        margin-inline-start: 8px;
+      }
+      .item-content-bottom .badge.reservation-done {
+        color: white;
+        border-color: #569872;
+        background-color: #569872;
+      }
+      .item-content-bottom .avaliable-cancel {
+        color: #ff0000;
+        border-color: #ff0000;
+        background-color: white;
+      }
+      .item-content-bottom .badge.done {
+        color: white;
+        border-color: #adadad;
+        background-color: #adadad;
+      }
+
+      .item-content-bottom .badge.cancel {
+        color: white;
+        border-color: #963232;
+        background-color: #963232;
+      }
+      .summation-info {
+        display: flex;
+        margin-top: 20px;
+        line-height: 20px;
+        text-align: start;
+      }
+      .summation-info strong {
+        color: black;
+      }
+      .center-text {
+        margin: 185px 0 406px;
+        font-size: 24px;
+        color: #93999f;
+      }
+      p {
+        margin: 26px 0 19px;
+        color: black;
+        text-align: start;
+      }
+      .arrive-time {
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 20px;
+        gap: 5px;
+      }
+
+      footer {
+        position: sticky;
+        bottom: 0;
+        border-top: 1px solid #e5e5e5;
+        padding: 10.78px 20px;
+        background-color: white;
+        z-index: 10;
+      }
+      footer button {
+        width: 100%;
+        border: none;
+        border-radius: 8.91px;
+        padding: 16px 0;
+        color: white;
+        font-size: 15.59px;
+        line-height: 18.61px;
+        text-align: center;
+        background-color: #006dbb;
+        cursor: pointer;
+      }
+      footer button:disabled {
+        background-color: #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app" style="width: auto">
+      <header>
+        <div class="top-group">
+          <button class="arrow-left" type="button">
+            <img src="images/arrow-left.svg" alt="" />
+          </button>
+          <h2 class="title">예약 확인</h2>
+        </div>
+      </header>
+      <main>
+        <!-- case1 -->
+        <p class="content-1">최근 6개월 동안 예약한 내역입니다.</p>
+        <!-- case1,2 -->
+        <!-- <p class="content-1">예약에 사용할 티켓을 선택해주세요.</p> -->
+
+        <!-- case1 -->
+        <input id="item1" type="checkbox" value="1" disabled />
+        <label for="item1">
+          <article>
+            <div class="item-content-top">
+              <span>구매일자: 2025-02-15 17:00:00</span>
+              <span>예약일자: 2025-04-20 16:00:00</span>
+            </div>
+            <div class="item-content-bottom">
+              <span>부산 - 오사카 왕복</span>
+              <div class="badge-group">
+                <span class="badge reservation-done">예약완료</span>
+                <span class="badge avaliable-cancel">예약취소 가능</span>
+              </div>
+            </div>
+            <div class="summation-info">
+              <b>인사이드 객실</b>
+              <strong>총 금액: 1,157,400원</strong>
+            </div>
+            <p>총 4명: 성인 2명, 어린이 1명, 유아 1명</p>
+            <div class="arrive-time">
+              <span>부산 - 오사카: 2025.07.22 15:00</span>
+              <span>오사카 - 부산: 2025.07.28 15:00</span>
+            </div>
+          </article>
+          <button>예약 취소</button>
+        </label>
+
+        <input id="item2" type="checkbox" value="4" disabled />
+        <label for="item2">
+          <article>
+            <div class="item-content-top">
+              <span>구매일자: 2025-02-15 17:00:00</span>
+              <span>예약일자: 2025-04-20 16:00:00</span>
+            </div>
+            <div class="item-content-bottom">
+              <span>부산 - 오사카 왕복</span>
+              <div class="badge-group">
+                <span class="badge reservation-done">예약완료</span>
+                <span class="badge avaliable-cancel">예약취소 불가능</span>
+              </div>
+            </div>
+            <div class="summation-info">
+              <b>인사이드 객실</b>
+              <strong>총 금액: 1,157,400원</strong>
+            </div>
+            <p>총 4명: 성인 2명, 어린이 1명, 유아 1명</p>
+            <div class="arrive-time">
+              <span>부산 - 오사카: 2025.07.22 15:00</span>
+              <span>오사카 - 부산: 2025.07.28 15:00</span>
+            </div>
+          </article>
+          <button>예약 취소</button>
+        </label>
+
+        <input id="item3" type="checkbox" value="5" disabled />
+        <label for="item3">
+          <article>
+            <div class="item-content-top">
+              <span>구매일자: 2025-02-15 17:00:00</span>
+              <span>예약일자: 2025-04-20 16:00:00</span>
+            </div>
+            <div class="item-content-bottom">
+              <span>부산 - 오사카 왕복</span>
+              <div class="badge-group">
+                <span class="badge done">사용완료</span>
+                <span class="badge avaliable-cancel">예약취소 불가능</span>
+              </div>
+            </div>
+            <div class="summation-info">
+              <b>인사이드 객실</b>
+              <strong>총 금액: 1,157,400원</strong>
+            </div>
+            <p>총 4명: 성인 2명, 어린이 1명, 유아 1명</p>
+            <div class="arrive-time">
+              <span>부산 - 오사카: 2025.07.22 15:00</span>
+              <span>오사카 - 부산: 2025.07.28 15:00</span>
+            </div>
+          </article>
+          <button>예약 취소</button>
+        </label>
+
+        <!-- case2 -->
+        <!-- <p class="center-text">예약 내역이 없습니다.</p> -->
+
+        <!-- case3 -->
+        <!-- <p class="center-text">예약에 사용할 티켓이 없습니다.</p> -->
+
+        <!-- case3 -->
+        <!-- <p class="content-2">선택한 0건이 사용됩니다.</p>
+        <p class="content-3">
+          주문번호가 같아야만 티켓 동시 사용이 가능합니다.
+        </p> -->
+      </main>
+
+      <!-- case3 -->
+      <!-- <footer>
+        <button>선택 완료</button>
+      </footer> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<html lang="en" style="height: auto">
+  <head>
+    <title>Payment</title>
+    <meta name="description" content="" />
+    <meta name="title" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <base href="" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10.78px 20px;
+        background-color: white;
+        color: black;
+        z-index: 10;
+      }
+
+      .top-group {
+        display: flex;
+        align-items: center;
+      }
+      .arrow-left {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .title {
+        width: 100%;
+        margin: 0;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 25.45px;
+        text-align: center;
+      }
+
+      main {
+        margin: 29.22px 0 23px;
+        padding: 0 20px;
+      }
+      .amount-group {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        font-size: 16px;
+      }
+      .amount-group div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        font-weight: bold;
+      }
+      .amount-group div span:nth-of-type(1) {
+        color: #466de6;
+      }
+      .amount-group b {
+        margin-bottom: 4px;
+      }
+      .amount-group ~ .amount-group {
+        margin-top: 20px;
+      }
+      .amount-group:last-of-type {
+        border: none;
+      }
+      .total-amount-box {
+        margin-top: 20px;
+        border-radius: 5px;
+        padding: 21px 10px;
+        box-shadow: 0px 0px 4px 0px #00000040;
+        line-height: 1em;
+        font-size: 16px;
+      }
+      .total-amount-box .first {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .total-amount-box .last {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-top: 1px solid #e5e5e5;
+        padding-top: 20px;
+        font-size: 20px;
+      }
+      .outer,
+      .inner {
+        display: flex;
+        justify-content: space-between;
+      }
+      .outer ~ .outer {
+        margin-top: 20px;
+      }
+      .inner {
+        margin-top: 15px;
+        padding-inline-start: 8px;
+        color: #93999f;
+      }
+
+      footer {
+        position: sticky;
+        display: flex;
+        bottom: 0;
+        padding: 10.78px 20px;
+        background-color: white;
+        z-index: 10;
+      }
+      footer button {
+        width: 100%;
+        border: none;
+        border-radius: 8.91px;
+        padding: 16px 0;
+        color: white;
+        font-size: 15.59px;
+        line-height: 18.61px;
+        text-align: center;
+        background-color: #006dbb;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app" style="width: auto">
+      <header>
+        <div class="top-group">
+          <button class="arrow-left" type="button">
+            <img src="images/arrow-left.svg" alt="" />
+          </button>
+          <h2 class="title">결제하기</h2>
+        </div>
+      </header>
+      <main>
+        <section class="amount-group">
+          <div>
+            <span>인사이드 객실</span>
+            <span>총 금액: 868,000원</span>
+          </div>
+          <span>성인 2명, 어린이 1명, 유아 1명</span>
+        </section>
+        <section class="total-amount-box">
+          <div class="first">금액 요약</div>
+          <div class="outer">
+            <span>객실 운임</span>
+            <span>1,600,000원</span>
+          </div>
+          <div class="outer">
+            <span>세금</span>
+            <span>197,400원</span>
+          </div>
+          <div class="inner">
+            <span>유류할증료</span>
+            <span>118,200원</span>
+          </div>
+          <div class="inner">
+            <span>터미널이용료</span>
+            <span>38,400원</span>
+          </div>
+          <div class="inner">
+            <span>출국세</span>
+            <span>2,000원</span>
+          </div>
+          <div class="inner">
+            <span>여객세</span>
+            <span>38,800원</span>
+          </div>
+          <div class="outer">
+            <span>사전 결제금액</span>
+            <span>-80,000원</span>
+          </div>
+          <div class="outer">
+            <span>유아 결제금액</span>
+            <span>-100원</span>
+          </div>
+          <div class="last">
+            <b>총 결제금액</b>
+            <b>1,157,400원</b>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <button>결제하기</button>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<html lang="en" style="height: auto">
+  <head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <style>
+      body {
+        text-align: center;
+      }
+      .modal-container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 358px;
+        border-radius: 15px;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0px 0px 4px 0px #00000040;
+        word-break: keep-all;
+        font-size: 16px;
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+      }
+      .modal-title {
+        padding: 40px 0;
+        font-size: 20px;
+      }
+      section {
+        padding: 0 20px;
+      }
+      section ~ section {
+        margin-top: 25px;
+      }
+      section div {
+        text-align: start;
+        font-size: 20px;
+        line-height: 35px;
+      }
+      section ol {
+        padding: 0 0 25px;
+        text-align: start;
+      }
+      section p:last-of-type {
+        margin: 0;
+      }
+      button {
+        width: 100%;
+        margin-top: 40px;
+        border: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 16px 0;
+        color: white;
+        font-size: 24px;
+        background-color: #456ceb;
+        cursor: pointer;
+      }
+      .button-wrapper {
+        display: flex;
+      }
+      .button-wrapper .first {
+        font-size: 20px;
+        border-end-end-radius: 0;
+      }
+      .button-wrapper.cancel .second {
+        color: #696d71;
+        background-color: #dedfe3;
+      }
+      .button-wrapper .second {
+        font-size: 20px;
+        border-end-start-radius: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- case1 -->
+    <!-- <div class="modal-container">
+      <div class="modal-title">인증 실패</div>
+      <section>
+        <div>인증번호가 맞지 않습니다.</div>
+      </section>
+      <button type="button">확인</button>
+    </div> -->
+
+    <!-- case2 -->
+    <!-- <div class="modal-container">
+      <div class="modal-title">예약 불가 안내</div>
+      <section>
+        <div>객실 예약자로 성인이 포함되어야만 예약이 가능합니다.</div>
+      </section>
+      <button type="button">확인</button>
+    </div> -->
+
+    <!-- case3 -->
+    <!-- <div class="modal-container">
+      <div class="modal-title">예약 취소 확인</div>
+      <section>
+        <ol>
+          <li>설정된 예약을 취소합니다.</li>
+          <li>예약이 취소되어 티켓은 예약 가능 상태로 복원합니다.</li>
+        </ol>
+      </section>
+      <button type="button">확인</button>
+    </div> -->
+
+    <!-- case4 -->
+    <div class="modal-container">
+      <div class="modal-title">유효시간 경과</div>
+      <section>
+        <div>
+          유효시간이 경과하였습니다. [재전송] 버튼을 입력해주시거나 처음
+          화면으로 이동해주세요.
+        </div>
+      </section>
+      <!-- case1, case2 -->
+      <!-- <button type="button">확인</button> -->
+
+      <!-- case3 -->
+      <!-- <div class="button-wrapper cancel">
+        <button type="button" class="first">취소</button>
+        <button type="button" class="second">예약 취소하기</button>
+      </div> -->
+
+      <!-- case4 -->
+      <div class="button-wrapper cancel">
+        <button type="button" class="first">처음화면으로 이동</button>
+        <button type="button" class="second">재전송하기</button>
+      </div>
+    </div>
+  </body>
+</html>
